@@ -1,0 +1,142 @@
+{
+  "id": "7c916166-7a59-4808-9988-a5c77e61057f",
+  "version": "1.1",
+  "name": "1",
+  "url": "https://weibo.com",
+  "tests": [{
+    "id": "9ec4ea2f-bcc3-4eb8-8ddb-b747cc2d3075",
+    "name": "批量隐藏",
+    "commands": [{
+      "id": "393017f6-2b6d-4d00-ad46-67cfbeaddf51",
+      "comment": "",
+      "command": "open",
+      "target": "你登陆后的主页url",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "689b3d00-7f45-452c-a2f8-b012e99992ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1167x933",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e73b397-2644-4d8a-bc35-9f07dd7bfc80",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "51113737-b2a0-4ed0-992c-c952284b0b04",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "e0de89ed-a795-4577-a67f-a05aca0c186e",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7421d4b-dd75-448a-9183-6a94f8f9da9d",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32892720-f75a-4688-ab44-01d6863a6d8c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter}+1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "7dd4a1d0-f072-4ae0-b938-7b7528b95175",
+      "comment": "",
+      "command": "click",
+      "target": "css=.WB_cardwrap:nth-child(${counter}) .WB_screen .W_ficon",
+      "targets": [
+        ["css=.WB_cardwrap:nth-child(46) .WB_screen .W_ficon", "css:finder"],
+        ["xpath=//div[@id='Pl_Official_MyProfileFeed__20']/div/div[46]/div/div/div/a/i", "xpath:idRelative"],
+        ["xpath=//div[46]/div/div/div/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d721a8c-92d3-4c6b-8f42-0f797acc5f17",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=转换为仅自己可见",
+      "targets": [
+        ["linkText=转换为仅自己可见", "linkText"],
+        ["css=.WB_cardwrap:nth-child(17) li:nth-child(7) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'转换为仅自己可见')])[16]", "xpath:link"],
+        ["xpath=//div[@id='Pl_Official_MyProfileFeed__20']/div/div[17]/div/div/div/div/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[48]", "xpath:href"],
+        ["xpath=//div[17]/div/div/div/div/ul/li[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ddffd91-a9ca-4e8f-92eb-e158abbdff0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.W_btn_a > span",
+      "targets": [
+        ["css=a.W_btn_a > span", "css"],
+        ["css=.W_btn_a > span", "css:finder"],
+        ["xpath=//div[@id='layer_15922871468491']/div/p[2]/a/span", "xpath:idRelative"],
+        ["xpath=//p[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6675dbcb-be90-4591-ab31-a8571fb77c71",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${counter}<46",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e02b71c-f875-48e5-b058-e1cbd302db39",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${page}+1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "0806c332-08a5-4a6b-942e-107c2e8b387f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=下一页",
+      "targets": [
+        ["linkText=下一页", "linkText"],
+        ["css=.next", "css:finder"],
+        ["xpath=//a[contains(text(),'下一页')]", "xpath:link"],
+        ["xpath=//div[@id='Pl_Official_MyProfileFeed__20']/div/div[47]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/lovetoc/profile?pids=Pl_Official_MyProfileFeed__20&is_search=0&visible=0&is_all=1&is_tag=0&profile_ftype=1&page=2#feedtop')])[2]", "xpath:href"],
+        ["xpath=//div[47]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf8a220c-cda2-4cd2-9b0f-d907929400c2",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${page}<10",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "dc564ff9-1f64-4422-b8ee-bbed04fcaa95",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9ec4ea2f-bcc3-4eb8-8ddb-b747cc2d3075"]
+  }],
+  "urls": ["https://weibo.com/"],
+  "plugins": []
+}
